@@ -298,6 +298,127 @@
    "color": "#8A8F98",
    "image": "img/p30.jpg",
    "soldOut": false
+  },
+  {
+   "id": "p43",
+   "name": "Футболка с принтом терновых лоз",
+   "cat": "tee",
+   "gender": "u",
+   "style": "street",
+   "price": 1190,
+   "color": "#3B3B3F",
+   "image": "img/p43.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p44",
+   "name": "Чёрная футболка с фиолетовым пламенем",
+   "cat": "tee",
+   "gender": "u",
+   "style": "street",
+   "price": 1090,
+   "color": "#1B1B1D",
+   "image": "img/p44.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p45",
+   "name": "Худи с большим принтом на спине",
+   "cat": "hood",
+   "gender": "u",
+   "style": "street",
+   "price": 2890,
+   "color": "#1B1B1D",
+   "image": "img/p45.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p46",
+   "name": "Зип-худи с рваными вставками",
+   "cat": "hood",
+   "gender": "u",
+   "style": "street",
+   "price": 3190,
+   "color": "#5A6068",
+   "image": "img/p46.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p47",
+   "name": "Чёрный бомбер с нашивками",
+   "cat": "jack",
+   "gender": "u",
+   "style": "street",
+   "price": 5490,
+   "color": "#1B1B1D",
+   "image": "img/p47.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p48",
+   "name": "Широкие джинсы с принтом огня",
+   "cat": "pants",
+   "gender": "u",
+   "style": "street",
+   "price": 2790,
+   "color": "#2B2B2F",
+   "image": "img/p48.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p49",
+   "name": "Чёрные джинсы со шнурком и принтами",
+   "cat": "pants",
+   "gender": "u",
+   "style": "street",
+   "price": 3090,
+   "color": "#1B1B1D",
+   "image": "img/p49.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p50",
+   "name": "Массивные чёрные кроссовки",
+   "cat": "shoes",
+   "gender": "u",
+   "style": "street",
+   "price": 4990,
+   "color": "#25272D",
+   "image": "img/p50.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p51",
+   "name": "Кеды с красной вышивкой и цепочкой",
+   "cat": "shoes",
+   "gender": "u",
+   "style": "street",
+   "price": 4390,
+   "color": "#1B1B1D",
+   "image": "img/p51.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p52",
+   "name": "Набор серебристых колец",
+   "cat": "acc",
+   "gender": "u",
+   "style": "street",
+   "price": 990,
+   "color": "#6B6F78",
+   "image": "img/p52.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p53",
+   "name": "Цепочка с кулоном-сердцем",
+   "cat": "acc",
+   "gender": "u",
+   "style": "street",
+   "price": 790,
+   "color": "#8A8F98",
+   "image": "img/p53.jpg",
+   "soldOut": false
   }
  ]
 }
