@@ -1,0 +1,413 @@
+{
+ "shop": {
+  "name": "Nord.West",
+  "currency": "₴"
+ },
+ "genders": [
+  {
+   "id": "all",
+   "name": "Всё",
+   "title": "Вся коллекция",
+   "text": "Три направления: блестящий Y2K, широкий streetwear и рваный grunge. Выберите раздел, тип вещи и свой стиль."
+  },
+  {
+   "id": "w",
+   "name": "Женское",
+   "title": "Женское",
+   "text": "Беби-тишки, мини-юбки, корсетные платья и платформы: от Y2K до гранжа."
+  },
+  {
+   "id": "m",
+   "name": "Мужское",
+   "title": "Мужское",
+   "text": "Бомберы, баггі, толстовки и массивные кроссовки: streetwear и grunge."
+  }
+ ],
+ "categories": [
+  {
+   "id": "tee",
+   "name": "Футболки"
+  },
+  {
+   "id": "hood",
+   "name": "Худи и свитеры"
+  },
+  {
+   "id": "jack",
+   "name": "Куртки"
+  },
+  {
+   "id": "pants",
+   "name": "Брюки и джинсы"
+  },
+  {
+   "id": "dress",
+   "name": "Платья и юбки"
+  },
+  {
+   "id": "shoes",
+   "name": "Обувь"
+  },
+  {
+   "id": "acc",
+   "name": "Аксессуары"
+  }
+ ],
+ "styles": [
+  {
+   "id": "y2k",
+   "name": "Y2K"
+  },
+  {
+   "id": "street",
+   "name": "Streetwear"
+  },
+  {
+   "id": "grunge",
+   "name": "Grunge"
+  }
+ ],
+ "products": [
+  {
+   "id": "p01",
+   "name": "Беби-тишка с бабочкой",
+   "cat": "tee",
+   "gender": "w",
+   "style": "y2k",
+   "price": 790,
+   "color": "#F2A5C8",
+   "image": "img/p01.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p02",
+   "name": "Топ со стразами",
+   "cat": "tee",
+   "gender": "w",
+   "style": "y2k",
+   "price": 990,
+   "color": "#B9A8F0",
+   "image": "img/p02.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p03",
+   "name": "Джинсы низкой посадки",
+   "cat": "pants",
+   "gender": "w",
+   "style": "y2k",
+   "price": 2390,
+   "color": "#7FA6D9",
+   "image": "img/p03.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p04",
+   "name": "Мини-юбка металлик",
+   "cat": "dress",
+   "gender": "w",
+   "style": "y2k",
+   "price": 1590,
+   "color": "#C5CAD3",
+   "image": "img/p04.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p05",
+   "name": "Велюровое худи",
+   "cat": "hood",
+   "gender": "w",
+   "style": "y2k",
+   "price": 2290,
+   "color": "#E88AB5",
+   "image": "img/p05.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p06",
+   "name": "Серебристый пуховик",
+   "cat": "jack",
+   "gender": "u",
+   "style": "y2k",
+   "price": 4890,
+   "color": "#AEB6C2",
+   "image": "img/p06.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p07",
+   "name": "Кроссовки на платформе",
+   "cat": "shoes",
+   "gender": "w",
+   "style": "y2k",
+   "price": 3890,
+   "color": "#F4D6E6",
+   "image": "img/p07.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p08",
+   "name": "Сумка-багет",
+   "cat": "acc",
+   "gender": "w",
+   "style": "y2k",
+   "price": 1290,
+   "color": "#9ED8E6",
+   "image": "img/p08.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p09",
+   "name": "Очки-маска",
+   "cat": "acc",
+   "gender": "u",
+   "style": "y2k",
+   "price": 690,
+   "color": "#6C5CE7",
+   "image": "img/p09.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p10",
+   "name": "Спортивные штаны трек",
+   "cat": "pants",
+   "gender": "m",
+   "style": "y2k",
+   "price": 1990,
+   "color": "#4A7BD0",
+   "image": "img/p10.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p11",
+   "name": "Oversize-футболка Heavy",
+   "cat": "tee",
+   "gender": "u",
+   "style": "street",
+   "price": 1090,
+   "color": "#1E2127",
+   "image": "img/p11.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p12",
+   "name": "Худи с вышивкой",
+   "cat": "hood",
+   "gender": "u",
+   "style": "street",
+   "price": 2690,
+   "color": "#3A404B",
+   "image": "img/p12.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p13",
+   "name": "Бомбер Core",
+   "cat": "jack",
+   "gender": "m",
+   "style": "street",
+   "price": 4290,
+   "color": "#4A5A3C",
+   "image": "img/p13.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p14",
+   "name": "Карго широкие",
+   "cat": "pants",
+   "gender": "u",
+   "style": "street",
+   "price": 2590,
+   "color": "#6F7A5A",
+   "image": "img/p14.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p15",
+   "name": "Джинсы баггі",
+   "cat": "pants",
+   "gender": "m",
+   "style": "street",
+   "price": 2790,
+   "color": "#5A7391",
+   "image": "img/p15.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p16",
+   "name": "Платье-худи",
+   "cat": "dress",
+   "gender": "w",
+   "style": "street",
+   "price": 2490,
+   "color": "#2B2F3A",
+   "image": "img/p16.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p17",
+   "name": "Массивные кроссовки",
+   "cat": "shoes",
+   "gender": "u",
+   "style": "street",
+   "price": 4590,
+   "color": "#D1D5DB",
+   "image": "img/p17.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p18",
+   "name": "Кепка Nord.West",
+   "cat": "acc",
+   "gender": "u",
+   "style": "street",
+   "price": 690,
+   "color": "#E2573B",
+   "image": "img/p18.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p19",
+   "name": "Кроссбоди-сумка",
+   "cat": "acc",
+   "gender": "u",
+   "style": "street",
+   "price": 1390,
+   "color": "#25272D",
+   "image": "img/p19.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p20",
+   "name": "Жилет утеплённый",
+   "cat": "jack",
+   "gender": "m",
+   "style": "street",
+   "price": 3290,
+   "color": "#C86B3C",
+   "image": "img/p20.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p21",
+   "name": "Чёрная футболка с готическим принтом",
+   "cat": "tee",
+   "gender": "u",
+   "style": "grunge",
+   "price": 990,
+   "color": "#1B1B1D",
+   "image": "img/p21.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p22",
+   "name": "Худи с металл-принтом и брызгами",
+   "cat": "hood",
+   "gender": "u",
+   "style": "grunge",
+   "price": 2790,
+   "color": "#1B1B1D",
+   "image": "img/p22.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p23",
+   "name": "Широкие карго-джинсы с принтом ворона",
+   "cat": "pants",
+   "gender": "u",
+   "style": "grunge",
+   "price": 3190,
+   "color": "#1B1B1D",
+   "image": "img/p23.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p24",
+   "name": "Зип-худи с меховым капюшоном и крестом",
+   "cat": "hood",
+   "gender": "u",
+   "style": "grunge",
+   "price": 3490,
+   "color": "#1B1B1D",
+   "image": "img/p24.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p26",
+   "name": "Платье-корсет с оборками",
+   "cat": "dress",
+   "gender": "w",
+   "style": "grunge",
+   "price": 3290,
+   "color": "#1B1B1D",
+   "image": "img/p26.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p27",
+   "name": "Юбка-плиссе с цепями и крестами",
+   "cat": "dress",
+   "gender": "w",
+   "style": "grunge",
+   "price": 2290,
+   "color": "#1B1B1D",
+   "image": "img/p27.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p31",
+   "name": "Асимметричное платье с рваным кружевом",
+   "cat": "dress",
+   "gender": "w",
+   "style": "grunge",
+   "price": 3690,
+   "color": "#1B1B1D",
+   "image": "img/p31.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p32",
+   "name": "Юбка-плиссе с крестами и ремнём",
+   "cat": "dress",
+   "gender": "w",
+   "style": "grunge",
+   "price": 2090,
+   "color": "#1B1B1D",
+   "image": "img/p32.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p28",
+   "name": "Ботинки на шнуровке с ручной росписью",
+   "cat": "shoes",
+   "gender": "u",
+   "style": "grunge",
+   "price": 5290,
+   "color": "#231F1E",
+   "image": "img/p28.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p29",
+   "name": "Кольцо «Терновый венец»",
+   "cat": "acc",
+   "gender": "u",
+   "style": "grunge",
+   "price": 990,
+   "color": "#8A8F98",
+   "image": "img/p29.jpg",
+   "soldOut": false
+  },
+  {
+   "id": "p30",
+   "name": "Многослойная цепь с крестом и жетоном",
+   "cat": "acc",
+   "gender": "u",
+   "style": "grunge",
+   "price": 790,
+   "color": "#8A8F98",
+   "image": "img/p30.jpg",
+   "soldOut": false
+  }
+ ]
+}

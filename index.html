@@ -37,7 +37,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var
 .count{max-width:1200px;margin:auto;padding:8px 20px;color:var(--mute);font-size:14px}
 .grid{max-width:1200px;margin:auto;padding:8px 20px 64px;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
 .p{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
-.pic{aspect-ratio:4/5;display:grid;place-items:center}
+.pic{aspect-ratio:3/4;display:grid;place-items:center}
 .pic svg{width:58%;fill:rgba(255,255,255,.88);stroke:rgba(0,0,0,.18);stroke-width:1.5}
 .info{padding:14px;display:flex;flex-direction:column;gap:2px;flex:1}
 .info b{font-weight:700}.info small{color:var(--mute)}
@@ -52,6 +52,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var
 footer{border-top:1px solid var(--line);padding:28px 20px;text-align:center;color:var(--mute);font-size:14px}
 @media(max-width:640px){.bar{flex-wrap:wrap}.gtabs{order:3;width:100%}.gtabs button{flex:1;padding:10px 6px;font-size:13px}.grid{grid-template-columns:repeat(2,1fr);gap:12px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.pic{overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover}.add[disabled]{background:var(--line);color:var(--mute);cursor:not-allowed}
 </style>
 </head>
 <body>
@@ -80,16 +81,7 @@ footer{border-top:1px solid var(--line);padding:28px 20px;text-align:center;colo
 </aside>
 
 <script>
-var G=[["all","Всё"],["w","Женское"],["m","Мужское"]];
-var C=[["all","Все вещи"],["tee","Футболки"],["hood","Худи и свитеры"],["jack","Куртки"],["pants","Брюки и джинсы"],["dress","Платья и юбки"],["shoes","Обувь"],["acc","Аксессуары"]];
-var S=[["all","Все стили"],["y2k","Y2K"],["street","Streetwear"],["grunge","Grunge"]];
-var CT={tee:"Футболка",hood:"Худи",jack:"Куртка",pants:"Брюки",dress:"Платье",shoes:"Обувь",acc:"Аксессуар"};
-var ST={y2k:"Y2K",street:"Streetwear",grunge:"Grunge"};
-var HD={all:["Вся коллекция","Три направления: блестящий Y2K, широкий streetwear и рваный grunge. Выберите раздел, тип вещи и свой стиль."],w:["Женское","Беби-тишки, мини-юбки, косухи и платформы: от Y2K до гранжа."],m:["Мужское","Бомберы, баггі, фланель и массивные кроссовки: streetwear и grunge."]};
-var P=[
-["Беби-тишка с бабочкой","tee","w","y2k",790,"#F2A5C8"],["Топ со стразами","tee","w","y2k",990,"#B9A8F0"],["Джинсы низкой посадки","pants","w","y2k",2390,"#7FA6D9"],["Мини-юбка металлик","dress","w","y2k",1590,"#C5CAD3"],["Велюровое худи","hood","w","y2k",2290,"#E88AB5"],["Серебристый пуховик","jack","u","y2k",4890,"#AEB6C2"],["Кроссовки на платформе","shoes","w","y2k",3890,"#F4D6E6"],["Сумка-багет","acc","w","y2k",1290,"#9ED8E6"],["Очки-маска","acc","u","y2k",690,"#6C5CE7"],["Спортивные штаны трек","pants","m","y2k",1990,"#4A7BD0"],
-["Oversize-футболка Heavy","tee","u","street",1090,"#1E2127"],["Худи с вышивкой","hood","u","street",2690,"#3A404B"],["Бомбер Core","jack","m","street",4290,"#4A5A3C"],["Карго широкие","pants","u","street",2590,"#6F7A5A"],["Джинсы баггі","pants","m","street",2790,"#5A7391"],["Платье-худи","dress","w","street",2490,"#2B2F3A"],["Массивные кроссовки","shoes","u","street",4590,"#D1D5DB"],["Кепка Nord.West","acc","u","street",690,"#E2573B"],["Кроссбоди-сумка","acc","u","street",1390,"#25272D"],["Жилет утеплённый","jack","m","street",3290,"#C86B3C"],
-["Футболка с выцветшим принтом","tee","u","grunge",990,"#3B3B3F"],["Фланелевая рубашка в клетку","jack","u","grunge",2190,"#8B2E2E"],["Рваные джинсы","pants","u","grunge",2490,"#3E4556"],["Кожаная косуха","jack","w","grunge",6490,"#1B1B1D"],["Вязаный кардиган","hood","u","grunge",2890,"#6B6F5A"],["Платье-комбинация","dress","w","grunge",2190,"#2A1F2D"],["Юбка в клетку","dress","w","grunge",1890,"#6E2A3A"],["Ботинки на шнуровке","shoes","u","grunge",4990,"#231F1E"],["Ремень с цепью","acc","u","grunge",890,"#4A4A4D"],["Набор цепей и браслетов","acc","u","grunge",790,"#7B7F86"]];
+var DB,s={g:"all",c:"all",s:"all"},cart=[];
 var IC={tee:"M30 14l-20 12 8 14 8-5v46h32V35l8 5 8-14-20-12c-2 6-8 9-14 9s-12-3-14-9z",
 hood:"M28 16l-20 14 7 14 9-5v45h52V39l9 5 7-14-20-14c-3 8-9 10-16 10s-13-2-16-10z",
 jack:"M32 12l-24 16 8 16 8-5v46h56V39l8 5 8-16-24-16-6 10v66h-4V22z",
@@ -97,28 +89,34 @@ pants:"M28 10h44l6 82H56L50 40l-6 52H22z",
 dress:"M38 10h24l4 24 14 56H20l14-56z",
 shoes:"M8 56c12 0 20-6 24-16l14 6c6 3 14 5 24 6 10 2 14 6 14 14v6H8z",
 acc:"M30 44h40l8 36H22zM38 44c0-16 24-16 24 0"};
-var s={g:"all",c:"all",s:"all"},cart=[];
 function $(i){return document.getElementById(i)}
-function fmt(n){return n.toLocaleString("uk-UA")+" ₴"}
-function tabs(el,list,key,role){el.innerHTML="";list.forEach(function(x){var b=document.createElement("button");b.textContent=x[1];
-if(role){b.setAttribute("role","tab");b.setAttribute("aria-selected",s[key]==x[0])}else b.setAttribute("aria-pressed",s[key]==x[0]);
-b.onclick=function(){s[key]=x[0];render()};el.appendChild(b)})}
+function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function fmt(n){return Number(n).toLocaleString("uk-UA")+" "+DB.shop.currency}
+function nm(list,id){for(var i=0;i<list.length;i++)if(list[i].id==id)return list[i].name;return id}
+function byId(id){return DB.products.filter(function(p){return p.id==id})[0]}
+function tabs(el,list,key,role){el.innerHTML="";list.forEach(function(x){var b=document.createElement("button");b.textContent=x.name;
+if(role){b.setAttribute("role","tab");b.setAttribute("aria-selected",s[key]==x.id)}else b.setAttribute("aria-pressed",s[key]==x.id);
+b.onclick=function(){s[key]=x.id;render()};el.appendChild(b)})}
 function render(){
-tabs($("gt"),G,"g",1);tabs($("ct"),C,"c",1);
-var st=$("st");st.innerHTML="<span>Стиль:</span>";var tmp=document.createElement("div");tabs(tmp,S,"s",0);while(tmp.firstChild)st.appendChild(tmp.firstChild);
-$("ht").textContent=HD[s.g][0];$("hp").textContent=HD[s.g][1];
-var l=P.map(function(p,i){return{p:p,i:i}}).filter(function(o){var p=o.p;return(s.g=="all"||p[2]=="u"||p[2]==s.g)&&(s.c=="all"||p[1]==s.c)&&(s.s=="all"||p[3]==s.s)});
+var cats=[{id:"all",name:"Все вещи"}].concat(DB.categories),sts=[{id:"all",name:"Все стили"}].concat(DB.styles);
+tabs($("gt"),DB.genders,"g",1);tabs($("ct"),cats,"c",1);
+var st=$("st");st.innerHTML="<span>Стиль:</span>";var tmp=document.createElement("div");tabs(tmp,sts,"s",0);while(tmp.firstChild)st.appendChild(tmp.firstChild);
+var g=DB.genders.filter(function(x){return x.id==s.g})[0]||DB.genders[0];$("ht").textContent=g.title;$("hp").textContent=g.text;
+var l=DB.products.filter(function(p){return(s.g=="all"||p.gender=="u"||p.gender==s.g)&&(s.c=="all"||p.cat==s.c)&&(s.s=="all"||p.style==s.s)});
 $("cc").textContent="Найдено: "+l.length;
-$("gr").innerHTML=l.length?l.map(function(o){var p=o.p;return '<article class="p"><div class="pic" style="background:'+p[5]+'"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="'+IC[p[1]]+'"/></svg></div><div class="info"><b>'+p[0]+'</b><small>'+CT[p[1]]+' · '+ST[p[3]]+' · '+(p[2]=="u"?"унисекс":p[2]=="w"?"женское":"мужское")+'</small><div class="row"><span>'+fmt(p[4])+'</span><button class="add" data-i="'+o.i+'">В корзину</button></div></div></article>'}).join(""):'<div class="empty">Ничего не найдено. Выберите другой стиль или раздел.</div>';
-document.querySelectorAll(".add").forEach(function(b){b.onclick=function(){cart.push(+b.dataset.i);drawCart();b.textContent="Добавлено";setTimeout(function(){b.textContent="В корзину"},900)}})}
+$("gr").innerHTML=l.length?l.map(function(p){
+var svg='<svg viewBox="0 0 100 100" aria-hidden="true"'+(p.image?' style="display:none"':'')+'><path d="'+(IC[p.cat]||IC.acc)+'"/></svg>';
+var pic=(p.image?'<img src="'+esc(p.image)+'" alt="'+esc(p.name)+'" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'">':'')+svg;
+return '<article class="p"><div class="pic" style="background:'+esc(p.color||"#888")+'">'+pic+'</div><div class="info"><b>'+esc(p.name)+'</b><small>'+esc(nm(DB.categories,p.cat))+' · '+esc(nm(DB.styles,p.style))+' · '+(p.gender=="u"?"унисекс":p.gender=="w"?"женское":"мужское")+'</small><div class="row"><span>'+fmt(p.price)+'</span><button class="add" data-i="'+esc(p.id)+'"'+(p.soldOut?' disabled':'')+'>'+(p.soldOut?"Нет в наличии":"В корзину")+'</button></div></div></article>'}).join(""):'<div class="empty">Ничего не найдено. Выберите другой стиль или раздел.</div>';
+document.querySelectorAll(".add:not([disabled])").forEach(function(b){b.onclick=function(){cart.push(b.dataset.i);drawCart();b.textContent="Добавлено";setTimeout(function(){b.textContent="В корзину"},900)}})}
 function drawCart(){$("cn").textContent=cart.length;
-$("cl").innerHTML=cart.length?cart.map(function(i,k){return '<li><span>'+P[i][0]+'</span><span>'+fmt(P[i][4])+' <button class="icon" data-k="'+k+'" aria-label="Убрать">×</button></span></li>'}).join(""):"<li>Корзина пуста. Добавьте вещь из каталога.</li>";
-$("ctot").textContent=fmt(cart.reduce(function(a,i){return a+P[i][4]},0));
+$("cl").innerHTML=cart.length?cart.map(function(id,k){var p=byId(id);return '<li><span>'+esc(p.name)+'</span><span>'+fmt(p.price)+' <button class="icon" data-k="'+k+'" aria-label="Убрать">×</button></span></li>'}).join(""):"<li>Корзина пуста. Добавьте вещь из каталога.</li>";
+$("ctot").textContent=fmt(cart.reduce(function(a,id){return a+byId(id).price},0));
 document.querySelectorAll("#cl [data-k]").forEach(function(b){b.onclick=function(){cart.splice(+b.dataset.k,1);drawCart()}})}
 $("cb").onclick=function(){$("cart").classList.add("open")};
 $("cx").onclick=function(){$("cart").classList.remove("open")};
 $("by").onclick=function(){if(cart.length){alert("Это демо-сайт: оплата пока не подключена.")}};
-render();drawCart();
+fetch("products.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){DB=d;document.title=DB.shop.name+" — магазин одежды";render();drawCart()}).catch(function(){$("gr").innerHTML='<div class="empty">Не удалось загрузить каталог (products.json). Откройте сайт по адресу github.io, а не как файл с компьютера.</div>'});
 </script>
 </body>
 </html>
